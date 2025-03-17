@@ -4,6 +4,7 @@ import Layout from '../Layout/Layout';
 import Home from '../Home/Home';
 import SearchResults from '../SearchResults/SearchResults';
 import SeeAvailability from '../SearchResults/SeeAvailability/SeeAvailability';
+import HotelDescription from '../Hotel-Description/HotelDescription';
 
 const myCreatedRoute = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const myCreatedRoute = createBrowserRouter([
       {
         path: '/availability',
         element: <SeeAvailability></SeeAvailability>
+      },
+      {
+        path: 'hotel-description',
+        element: <HotelDescription></HotelDescription>
       }
     ],
   },

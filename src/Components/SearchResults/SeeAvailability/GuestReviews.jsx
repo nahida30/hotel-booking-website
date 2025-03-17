@@ -1,4 +1,5 @@
 import { Clock, CreditCard, ChevronDown, Plus } from "lucide-react"
+import SimilarProperties from "./SimilarProperties"
 
 export default function GuestReviews() {
   // Rating data
@@ -87,6 +88,8 @@ export default function GuestReviews() {
           Read all reviews
         </button>
       </div>
+
+      <SimilarProperties></SimilarProperties>
 
     </div>
   )
