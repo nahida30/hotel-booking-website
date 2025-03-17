@@ -1,4 +1,5 @@
 import { MapPin, Heart, Share, Tag } from "lucide-react"
+import PropertyDescription from "./PropertyDescription"
 
 export default function SeeAvailability() {
   return (
@@ -169,6 +170,8 @@ export default function SeeAvailability() {
         </div>
       </div>
 </div>
+
+<PropertyDescription></PropertyDescription>
     </div>
   )
 }
