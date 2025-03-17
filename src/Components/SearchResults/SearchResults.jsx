@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const filterOptions = {
     'Popular filters for Cox\'s Bazar': [
@@ -84,6 +85,7 @@ const filterOptions = {
 
 export default function SearchResults() {
   const [selectedFilters, setSelectedFilters] = useState({});
+  const navigate = useNavigate();
 
   const handleCheckboxChange = (category, option) => {
     setSelectedFilters((prevFilters) => {
@@ -95,6 +97,10 @@ export default function SearchResults() {
 
       return { ...prevFilters, [category]: updatedFilters };
     });
+  };
+
+  const seeAvailability = () => {
+    navigate("/availability"); 
   };
 
   return (
@@ -257,7 +263,7 @@ export default function SearchResults() {
               <div className="text-right">
                 <div className="text-sm bg-gray-800 text-white px-2 py-1 rounded-md inline-block mb-2">{hotel.rating}</div>
                 <p className="text-lg font-bold">BDT {hotel.price}</p>
-                <button className="mt-2 bg-blue-600 text-white px-4 py-1 rounded-lg">See availability</button>
+                <button className="mt-2 bg-blue-600 text-white cursor-pointer px-4 py-1 rounded-lg"  onClick={seeAvailability} >See availability</button>
               </div>
             </div>
           ))}
