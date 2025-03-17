@@ -1,7 +1,13 @@
 import { Calendar, Users, Tag, Info, Check, CreditCard, Clock, Coffee } from "lucide-react"
 import GuestReviews from "./GuestReviews"
+import { useNavigate } from "react-router-dom";
 
 export default function AvailabilityTable() {
+    const navigate = useNavigate();
+
+    const handleBooking = () => {
+        navigate("/booking-form"); 
+      };
   return (
     <div className="max-w-[1400px] mx-auto ">
       {/* Header */}
@@ -247,7 +253,7 @@ export default function AvailabilityTable() {
                     <option>3</option>
                   </select>
 
-                  <button className="bg-blue-600 text-white py-3 px-4 rounded w-full font-medium hover:bg-blue-700 transition duration-200 mb-3">
+                  <button className="bg-blue-600 text-white py-3 px-4 rounded w-full font-medium hover:bg-blue-700 transition duration-200 mb-3"  onClick={handleBooking} >
                     Continue to book
                   </button>
 

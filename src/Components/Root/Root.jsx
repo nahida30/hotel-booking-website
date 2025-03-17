@@ -5,6 +5,7 @@ import Home from '../Home/Home';
 import SearchResults from '../SearchResults/SearchResults';
 import SeeAvailability from '../SearchResults/SeeAvailability/SeeAvailability';
 import HotelDescription from '../Hotel-Description/HotelDescription';
+import BookingForm from '../BookingForm/BookingForm';
 
 const myCreatedRoute = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const myCreatedRoute = createBrowserRouter([
       {
         path: 'hotel-description',
         element: <HotelDescription></HotelDescription>
+      },
+      {
+        path: 'booking-form',
+        element: <BookingForm></BookingForm>
       }
     ],
   },
