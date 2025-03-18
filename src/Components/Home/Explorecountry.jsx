@@ -13,7 +13,7 @@ const destinations = [
 
 export default function Explorecountry() {
   const navigate = useNavigate();
-  const handleBooking = () => {
+  const handleExplore = () => {
     navigate("/search-results"); 
   };
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -38,7 +38,7 @@ export default function Explorecountry() {
           <div
             key={index}
             className="min-w-[20%] flex-shrink-0 bg-white cursor-pointer rounded-lg overflow-hidden shadow-sm"
-            onClick={handleBooking}
+            onClick={handleExplore}
           >
             <img
               src={dest.image}

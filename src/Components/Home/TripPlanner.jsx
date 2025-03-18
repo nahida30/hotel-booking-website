@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 export default function TripPlanner() {
+  const navigate = useNavigate();
+  const handlePlan = () => {
+    navigate("/search-results"); 
+  };
     const categories = [
       { name: "City", icon: "🏙️" },
       { name: "Beach", icon: "🏖️" },
@@ -27,7 +33,7 @@ export default function TripPlanner() {
           ))}
         </div>
   
-        <div className="w-48 rounded-lg overflow-hidden shadow-sm">
+        <div className="w-48 rounded-lg overflow-hidden shadow-sm"  onClick={handlePlan}>
           <img
             src="https://www.bproperty.com/blog/wp-content/uploads/Tea-2.jpg"
             alt="Sylhet"
