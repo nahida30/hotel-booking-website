@@ -30,24 +30,28 @@ import SearchForm from "./SearchForm";
 import TravelPromo from "./TravelPromo";
 
 const Layout = () => {
-  const location = useLocation(); // Get current page path
-  const isRegisterPage = location.pathname === "/register"; // Check if it's the register page
+  const location = useLocation();
+  const isAuthPage = location.pathname === "/register" || location.pathname === "/signin";
 
   return (
     <div>
       <Navbar />
-      {/* Hide ServiceNav, Hero, and SearchForm on the Register page */}
-      {!isRegisterPage && (
+      {!isAuthPage && (
         <>
           <ServiceNav />
           <Hero />
           <SearchForm />
         </>
       )}
+
+      {/* Main Content (Outlet) */}
       <Outlet />
-      <TravelPromo />
+
+      {/* TravelPromo should be below Outlet */}
+      {!isAuthPage && <TravelPromo />}
     </div>
   );
 };
 
 export default Layout;
+

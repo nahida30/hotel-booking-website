@@ -7,6 +7,7 @@ import SeeAvailability from '../SearchResults/SeeAvailability/SeeAvailability';
 import HotelDescription from '../Hotel-Description/HotelDescription';
 import BookingForm from '../BookingForm/BookingForm';
 import Register from '../auth/Register';
+import Signin from '../auth/Signin';
 
 const myCreatedRoute = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const myCreatedRoute = createBrowserRouter([
       {
         path: 'register',
         element: <Register></Register>
+      },
+      {
+        path: 'signin',
+        element: <Signin></Signin>
       }
     ],
   },

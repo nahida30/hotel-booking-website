@@ -4,7 +4,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isRegisterPage = location.pathname === "/register";
+  const isAuthPage = location.pathname === "/register" || location.pathname === "/signin";
 
   return (
     <nav className="bg-[#003580] text-white py-2.5">
@@ -14,8 +14,8 @@ const Navbar = () => {
           <a href="/">Booking.com</a>
         </h1>
 
-        {/* Show only language and help button on Register page */}
-        {isRegisterPage ? (
+        {/* Show only language and help button on Register and Sign In pages */}
+        {isAuthPage ? (
           <div className="flex items-center gap-5">
             {/* Language Button */}
             <button className="w-8 h-8 bg-white text-[#003580] rounded-full flex items-center justify-center">
@@ -58,7 +58,10 @@ const Navbar = () => {
             </button>
 
             {/* Sign In Button */}
-            <button className="bg-white text-[#003580] px-2 py-1 sm:px-4 sm:py-2 rounded-md text-xs sm:text-sm">
+            <button
+              className="bg-white text-[#003580] px-2 py-1 sm:px-4 sm:py-2 rounded-md text-xs sm:text-sm"
+              onClick={() => navigate("/signin")}
+            >
               Sign in
             </button>
           </div>
