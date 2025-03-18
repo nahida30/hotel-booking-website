@@ -2,10 +2,11 @@
 
 const Hero = () => (
   <div
-    className="bg-cover bg-center h-[300px] sm:h-[400px] flex items-center justify-center text-white text-center"
+    className="bg-cover bg-center h-[300px] sm:h-[300px] flex items-center justify-center text-white text-center"
     style={{
-      backgroundImage:
-        'url("https://q-xx.bstatic.com/xdata/images/xphoto/720x217/461012046.jpeg?k=edbf573a700063283054807b713640b3aa483f0595b61d4a016ca8f6e3814b35&o=%20720w,%20https://r-xx.bstatic.com/xdata/images/xphoto/1440x434/461012046.jpeg?k=edbf573a700063283054807b713640b3aa483f0595b61d4a016ca8f6e3814b35&o=%201440w,%20https://r-xx.bstatic.com/xdata/images/xphoto/2880x868/461012046.jpeg?k=edbf573a700063283054807b713640b3aa483f0595b61d4a016ca8f6e3814b35&o=%202880w")',
+      // backgroundImage:
+      //   'url("https://q-xx.bstatic.com/xdata/images/xphoto/720x217/461012046.jpeg?k=edbf573a700063283054807b713640b3aa483f0595b61d4a016ca8f6e3814b35&o=%20720w,%20https://r-xx.bstatic.com/xdata/images/xphoto/1440x434/461012046.jpeg?k=edbf573a700063283054807b713640b3aa483f0595b61d4a016ca8f6e3814b35&o=%201440w,%20https://r-xx.bstatic.com/xdata/images/xphoto/2880x868/461012046.jpeg?k=edbf573a700063283054807b713640b3aa483f0595b61d4a016ca8f6e3814b35&o=%202880w")',
+      backgroundColor: '#003580'
     }}
   >
     <div className="px-4">
