@@ -3,8 +3,10 @@ import image2 from "../../../public/assests/images/image8.jpg"
 import image3 from "../../../public/assests/images/image9.jpg"
 import image4 from "../../../public/assests/images/image10.jpg"
 import image5 from "../../../public/assests/images/image4.jpg"
+import { useNavigate } from "react-router-dom"
 
 const TrendingDestinations = () => {
+  const navigate = useNavigate();
    
   
     return (
@@ -13,7 +15,7 @@ const TrendingDestinations = () => {
         <p className="text-gray-600 mb-6">Most popular choices for travellers from Bangladesh</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="col-span-2">
-            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90">
+            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90" onClick={() => navigate("/search-results")}>
               <img
                 src={image1}
                 alt="Kuala Lumpur"
@@ -25,7 +27,7 @@ const TrendingDestinations = () => {
             </div>
           </div>
           <div>
-            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90">
+            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90" onClick={() => navigate("/search-results")}>
               <img
                 src={image2}
                 alt="Dhaka"
@@ -35,7 +37,7 @@ const TrendingDestinations = () => {
             </div>
           </div>
           <div>
-            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90">
+            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90" onClick={() => navigate("/search-results")}>
               <img
                 src={image3}
                 alt="Bangkok"
@@ -45,7 +47,7 @@ const TrendingDestinations = () => {
             </div>
           </div>
           <div>
-            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90">
+            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90" onClick={() => navigate("/search-results")}>
               <img
                 src={image4}
                 alt="Cox's Bazar"
@@ -55,7 +57,7 @@ const TrendingDestinations = () => {
             </div>
           </div>
           <div>
-            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90">
+            <div className="relative rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-90" onClick={() => navigate("/search-results")}>
               <img
                 src={image5}
                 alt="Singapore"
