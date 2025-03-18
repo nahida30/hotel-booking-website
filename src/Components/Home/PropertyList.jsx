@@ -1,9 +1,11 @@
 "use client";
+import { useNavigate } from "react-router-dom";
 import image1 from "../../../public/assests/images/image2.jpg"
 import image2 from "../../../public/assests/images/image3.jpg"
 import image3 from "../../../public/assests/images/image4.jpg"
 
 const PropertyList = () => {
+  const navigate = useNavigate();
   return (
     <div className="p-6 max-w-[1200px] mx-auto">
       <h2 className="text-2xl font-bold mb-6">Still interested in these properties?</h2>
@@ -11,7 +13,7 @@ const PropertyList = () => {
       {/* Property Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
         {/* Property 1 */}
-        <div className="bg-white rounded-lg shadow-md w-72">
+        <div className="bg-white rounded-lg shadow-md w-72 cursor-pointer" onClick={() => navigate("/availability")}>
           <img src={image1} alt="" className="h-52" />
          <div className="p-2">
          <h3 className="text-sm font-bold mb-2">The Ark</h3>
@@ -26,7 +28,7 @@ const PropertyList = () => {
         </div>
 
         {/* Property 2 */}
-        <div className="bg-white rounded-lg shadow-md w-72">
+        <div className="bg-white rounded-lg shadow-md w-72 cursor-pointer" onClick={() => navigate("/availability")}>
         <img src={image2} alt="" className="h-52" />
          <div className="p-2">
          <h3 className="text-sm font-semibold mb-2">Balishira Resort Ltd.</h3>
@@ -41,7 +43,7 @@ const PropertyList = () => {
         </div>
 
         {/* Property 3 */}
-        <div className="bg-white rounded-lg shadow-md w-72">
+        <div className="bg-white rounded-lg shadow-md w-72 cursor-pointer" onClick={() => navigate("/availability")}>
         <img src={image3} alt="" className="h-52" />
           <div className="p-2">
           <h3 className="text-sm font-semibold mb-2">Platinum Residence</h3>
