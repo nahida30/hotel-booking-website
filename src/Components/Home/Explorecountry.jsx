@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const destinations = [
   { name: "Cox's Bazar", properties: 60, image: "https://www.brownandhudson.com/assets/uploads/global/Nowhere_road.jpg" },
@@ -11,6 +12,10 @@ const destinations = [
 ];
 
 export default function Explorecountry() {
+  const navigate = useNavigate();
+  const handleBooking = () => {
+    navigate("/search-results"); 
+  };
   const [scrollIndex, setScrollIndex] = useState(0);
 
   const handleNext = () => {
@@ -32,7 +37,8 @@ export default function Explorecountry() {
         {destinations.map((dest, index) => (
           <div
             key={index}
-            className="min-w-[20%] flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-sm"
+            className="min-w-[20%] flex-shrink-0 bg-white cursor-pointer rounded-lg overflow-hidden shadow-sm"
+            onClick={handleBooking}
           >
             <img
               src={dest.image}
