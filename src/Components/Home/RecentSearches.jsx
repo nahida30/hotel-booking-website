@@ -1,8 +1,10 @@
 "use client";
+import { useNavigate } from "react-router-dom";
 import image1 from "../../../public/assests/images/image5.jpg"
 import image2 from "../../../public/assests/images/image6.jpg"
 
 const RecentSearches = () => {
+  const navigate = useNavigate();
   const searches = [
     {
       id: 1,
@@ -25,7 +27,7 @@ const RecentSearches = () => {
       <h3 className="text-2xl font-bold mb-5">Your recent searches</h3>
       <div className="flex gap-4">
 
-      <div className="flex flex-col sm:flex-row gap-5">
+      <div className="flex flex-col sm:flex-row gap-5"  onClick={() => navigate("/search-results")} >
        
           <div
             className="flex items-center gap-5 p-3 border border-gray-200 rounded-lg cursor-pointer"
@@ -42,19 +44,19 @@ const RecentSearches = () => {
           </div>
 
       </div>
-      <div className="flex flex-col sm:flex-row gap-5">
+      <div className="flex flex-col sm:flex-row gap-5" onClick={() => navigate("/search-results")}>
        
           <div
             className="flex items-center gap-5 p-3 border border-gray-200 rounded-lg cursor-pointer"
           >
             <img
-              src={image1}
+              src={image2}
               alt="img"
               className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-md"
             />
             <div>
               <h4 className="text-sm font-bold">Dhaka</h4>
-              <p className="text-sm text-gray-600">24 Nov–30 Nov, 2 people</p>
+              <p className="text-sm text-gray-600">30 Nov–12 Dec, 2 people</p>
             </div>
           </div>
 
